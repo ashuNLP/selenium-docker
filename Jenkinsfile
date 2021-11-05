@@ -17,7 +17,8 @@ pipeline {
             steps {
 			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'Docker90*#', usernameVariable: 'ashuchaudhary')]) {
 			        sh "docker login --username='ashuchaudhary' --password='Docker90*#'"
-			        sh "docker image push ashuch/selenium-docker:latest"
+			        sh "docker tag ashuch/selenium-docker:ashuimagetag ashu_repo1:ashuimagetag"
+			        sh "docker push ashu_repo1:ashuimagetag"
 			    }
             }
         }
