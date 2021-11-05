@@ -30,7 +30,7 @@ services:
       - MODULE=search-module.xml
       - HUB_HOST=hub
     volumes:
-      - ./search-result:/usr/share/udemy/test-output
+      - ./output/search-result:/usr/share/udemy/test-output
   book-flight-module:
     image: ashuc/selenium-docker
     depends_on:
@@ -40,4 +40,4 @@ services:
       - MODULE=search-module.xml
       - HUB_HOST=hub
     volumes:
-      - ./book-result:/usr/share/udemy/test-output
+      - ./output/book-result:/usr/share/udemy/test-output
