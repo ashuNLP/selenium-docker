@@ -14,6 +14,7 @@ services:
       - ./downloads:/home/seluser/Downloads
   firefox:
     image: selenium/node-firefox:3.14
+    shm_size: '1gb'
     depends_on:
       - hub
     environment:
